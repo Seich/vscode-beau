@@ -1,0 +1,40 @@
+{
+  "name": "vscode-beau",
+  "displayName": "Beaujs",
+  "description": "A VS Code extension for Beau.",
+  "version": "0.0.4",
+  "publisher": "seich",
+  "engines": {
+    "vscode": "^1.19.0"
+  },
+  "repository": "https://github.com/Seich/vscode-beau",
+  "categories": ["Other"],
+  "activationEvents": ["onCommand:beau.newRequest"],
+  "main": "./extension",
+  "contributes": {
+    "commands": [
+      {
+        "command": "beau.newRequest",
+        "title": "Beau: Request"
+      }
+    ]
+  },
+  "scripts": {
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "test": "node ./node_modules/vscode/bin/test"
+  },
+  "devDependencies": {
+    "typescript": "^2.6.1",
+    "vscode": "^1.1.6",
+    "@types/node": "^7.0.43"
+  },
+  "dependencies": {
+    "beau": "^0.6.1",
+    "http-status": "^1.0.1",
+    "js-yaml": "^3.10.0"
+  },
+  "galleryBanner": {
+    "color": "#e94a58"
+  },
+  "icon": "icon.png"
+}
